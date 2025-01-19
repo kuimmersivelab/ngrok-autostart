@@ -1,0 +1,15 @@
+[Unit]
+Description=Autostart Script for Ngrok Tunnel Service
+After=network.target
+
+[Service]
+ExecStart=/srv/sandbox/ngrok-autostart/autostart.sh
+Restart=always
+User=kuil
+WorkingDirectory=/srv/sandbox/ngrok-autostart/
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
