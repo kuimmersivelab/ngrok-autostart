@@ -1,12 +1,11 @@
 [Unit]
 Description=Autostart Script for Ngrok Tunnel Service
-After=ngrok-autostart-01.service
+After=network.target
 
 [Service]
-ExecStart=/srv/sandbox/ngrok-autostart/sub2-startup.sh
-ExecStartPost=/srv/sandbox/ngrok-autostart/sub2-post-startup.sh
+ExecStart=/srv/sandbox/ngrok-autostart/startup.sh
+ExecStartPost=/srv/sandbox/ngrok-autostart/post-startup.sh
 Restart=always
-RestartSec=6h
 User=kuil
 WorkingDirectory=/srv/sandbox/ngrok-autostart/
 StandardOutput=journal
