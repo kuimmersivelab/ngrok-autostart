@@ -3,8 +3,8 @@ Description=Autostart Script for Ngrok Tunnel Service
 After=network.target
 
 [Service]
-ExecStart=/srv/sandbox/ngrok-autostart/startup.sh
-ExecStartPost=/srv/sandbox/ngrok-autostart/post-startup.sh
+ExecStart=/srv/sandbox/ngrok-autostart/sub1-startup.sh
+ExecStartPost=/srv/sandbox/ngrok-autostart/sub1-post-startup.sh
 Restart=always
 RestartSec=6h
 User=kuil
