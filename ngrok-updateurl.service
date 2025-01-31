@@ -1,0 +1,16 @@
+[Unit]
+Description=Update URL Script for Ngrok Tunnel Service
+After=ngrok-autostart.service
+
+[Service]
+ExecStart=/srv/sandbox/ngrok-autostart/post-startup.sh
+Restart=always
+RuntimeMaxSec=4h
+User=kuil
+WorkingDirectory=/srv/sandbox/ngrok-autostart/
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
