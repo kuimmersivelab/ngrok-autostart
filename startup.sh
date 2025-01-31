@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ngrok http http://localhost:8000
+ngrok http http://localhost:6000
 
